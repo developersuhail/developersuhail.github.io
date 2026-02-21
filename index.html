@@ -5,279 +5,206 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mohd Suhail | Senior Mobile Application Developer</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<script src="https://unpkg.com/scrollreveal"></script>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
+body{background:#0f172a;color:white;}
+nav{position:fixed;top:0;width:100%;background:rgba(15,23,42,0.8);backdrop-filter:blur(10px);padding:15px 0;text-align:center;z-index:1000;}
+nav a{color:white;margin:0 15px;text-decoration:none;font-weight:500;}
+nav a:hover{color:#38bdf8;}
 
-body{
-background:#0f172a;
-color:white;
-}
+section{padding:100px 20px;max-width:1100px;margin:auto;}
+h2{text-align:center;margin-bottom:40px;color:#38bdf8;}
 
-/* NAVBAR */
-nav{
-position:fixed;
-top:0;
-width:100%;
-background:rgba(15,23,42,0.7);
-backdrop-filter:blur(10px);
-padding:15px 0;
-text-align:center;
-z-index:1000;
-}
-
-nav a{
-color:white;
-margin:0 15px;
-text-decoration:none;
-font-weight:500;
-transition:0.3s;
-}
-
-nav a:hover{
-color:#38bdf8;
-}
-
-/* HERO */
 .hero{
-height:100vh;
+min-height:100vh;
 display:flex;
-flex-direction:column;
-justify-content:center;
 align-items:center;
-text-align:center;
+justify-content:center;
 background:linear-gradient(135deg,#0f172a,#1e293b,#2563eb);
-padding:20px;
+padding-top:100px;
 }
-
-.hero h1{
-font-size:48px;
+.hero-container{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:60px;
+flex-wrap:wrap;
+max-width:1100px;
 }
-
-.hero h2{
-margin-top:10px;
-font-weight:400;
-color:#cbd5e1;
-height:30px;
+.profile-img{
+width:260px;height:260px;border-radius:50%;
+object-fit:cover;border:5px solid #38bdf8;
 }
-
-.hero p{
-margin-top:20px;
-max-width:750px;
-color:#94a3b8;
-}
+.hero-text{max-width:600px;}
+.hero-text h1{font-size:42px;}
+.hero-text h3{margin-top:10px;color:#cbd5e1;height:30px;}
+.hero-text p{margin-top:20px;color:#94a3b8;line-height:1.6;}
 
 .btn{
-margin-top:25px;
+margin-top:20px;
 padding:12px 25px;
 background:#2563eb;
 border-radius:30px;
 text-decoration:none;
 color:white;
 font-weight:600;
-transition:0.3s;
 display:inline-block;
+margin-right:10px;
 }
+.btn:hover{background:#1d4ed8;}
 
-.btn:hover{
-background:#1d4ed8;
-transform:translateY(-3px);
-}
+.skills{display:flex;flex-wrap:wrap;justify-content:center;}
+.skill{background:rgba(255,255,255,0.05);padding:10px 18px;margin:8px;border-radius:25px;}
+.skill:hover{background:#2563eb;}
 
-/* SECTION */
-section{
-padding:100px 20px;
-max-width:1100px;
-margin:auto;
-}
+.timeline{border-left:3px solid #2563eb;padding-left:20px;}
+.job{margin-bottom:30px;}
+.job span{color:#94a3b8;font-size:14px;}
 
-h3{
-text-align:center;
-margin-bottom:50px;
-font-size:30px;
-color:#38bdf8;
-}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
+.card{background:rgba(255,255,255,0.05);padding:25px;border-radius:15px;}
+.card:hover{background:rgba(37,99,235,0.2);}
+.card a{display:inline-block;margin-top:10px;color:#38bdf8;text-decoration:none;font-weight:600;}
 
-/* SKILLS */
-.skills{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-}
+.contact{text-align:center;line-height:2;}
+.contact a{color:#38bdf8;text-decoration:none;}
 
-.skill{
-background:rgba(255,255,255,0.05);
-padding:10px 18px;
-margin:8px;
-border-radius:25px;
-transition:0.3s;
-}
-
-.skill:hover{
-background:#2563eb;
-}
-
-/* EXPERIENCE */
-.timeline{
-border-left:3px solid #2563eb;
-padding-left:20px;
-}
-
-.job{
-margin-bottom:40px;
-}
-
-.job span{
-color:#94a3b8;
-font-size:14px;
-}
-
-/* PROJECTS */
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
-}
-
-.card{
-background:rgba(255,255,255,0.05);
-padding:25px;
-border-radius:15px;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-background:rgba(37,99,235,0.2);
-}
-
-.card a{
-display:inline-block;
-margin-top:12px;
-color:#38bdf8;
-text-decoration:none;
-font-weight:600;
-}
-
-/* CONTACT */
-.contact{
-text-align:center;
-}
-
-.contact a{
-color:#38bdf8;
-text-decoration:none;
-}
-
-/* FOOTER */
-footer{
-text-align:center;
-padding:20px;
-background:#1e293b;
-color:#94a3b8;
-}
+footer{text-align:center;padding:20px;background:#1e293b;color:#94a3b8;}
 
 @media(max-width:768px){
-.hero h1{font-size:32px;}
+.hero-text h1{font-size:30px;}
+.profile-img{width:200px;height:200px;}
 }
 </style>
 </head>
 <body>
 
 <nav>
-<a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#experience">Experience</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
 </nav>
 
+<!-- HERO -->
 <div class="hero">
+<div class="hero-container">
+<img src="profile.jpg" class="profile-img" alt="Mohd Suhail">
+<div class="hero-text">
 <h1>Mohd Suhail</h1>
-<h2 id="typing"></h2>
+<h3 id="typing"></h3>
 <p>
-Senior Mobile Application Developer with 6+ years of experience building scalable Android & Flutter applications.
-Specialized in Clean Architecture, POS systems, Bluetooth integrations, payment gateways and real-time mobile systems.
+Results-driven Senior Mobile Application Developer with 7+ years of experience
+building scalable Android and Flutter applications. Expert in Clean Architecture,
+Jetpack Compose, POS systems, Bluetooth/BLE integrations, Payment Gateways and
+real-time mobile systems. Delivered 15+ production applications live on Play Store.
 </p>
+
+<a href="Suhail.pdf" class="btn" target="_blank">Download Resume</a>
 <a href="#contact" class="btn">Hire Me</a>
-<a href="resume.pdf" class="btn" target="_blank">Download Resume</a>
+</div>
+</div>
 </div>
 
+<!-- SKILLS -->
 <section id="skills">
-<h3>Technical Skills</h3>
+<h2>Technical Skills</h2>
 <div class="skills">
 <div class="skill">Android (Kotlin/Java)</div>
 <div class="skill">Flutter (Dart)</div>
+<div class="skill">Jetpack Compose</div>
 <div class="skill">Clean Architecture</div>
 <div class="skill">MVVM / MVC / MVP</div>
+<div class="skill">Hilt / Dagger2</div>
+<div class="skill">Coroutines / Flow</div>
 <div class="skill">Bloc / Riverpod / GetX</div>
-<div class="skill">Firebase</div>
-<div class="skill">REST APIs</div>
-<div class="skill">WebSockets</div>
-<div class="skill">GraphQL</div>
-<div class="skill">Bluetooth / POS Systems</div>
-<div class="skill">Payment Gateway</div>
+<div class="skill">REST APIs / GraphQL</div>
+<div class="skill">WebSockets / MQTT</div>
+<div class="skill">Room / SQLite</div>
+<div class="skill">WorkManager</div>
+<div class="skill">Bluetooth / BLE</div>
+<div class="skill">POS Systems</div>
+<div class="skill">Payment Gateway / Billing</div>
+<div class="skill">Firebase / FCM</div>
+<div class="skill">Crashlytics / Analytics</div>
 <div class="skill">CI/CD</div>
-<div class="skill">Performance Optimization</div>
+<div class="skill">Agile / Scrum</div>
 </div>
 </section>
 
+<!-- EXPERIENCE -->
 <section id="experience">
-<h3>Professional Experience</h3>
+<h2>Professional Experience</h2>
 <div class="timeline">
+
 <div class="job">
-<h4>Senior Software Engineer – Nexintain Technologies</h4>
-<span>Apr 2025 – Present</span>
-<p>Leading architecture and scalable mobile app development using Flutter & Android.</p>
+<h4>Sr Software Engineer – Nexintain Technologies</h4>
+<span>Apr 2025 – Jan 2026 | Noida</span>
 </div>
+
 <div class="job">
-<h4>Senior Mobile Developer – Trezi</h4>
-<span>May 2023 – Feb 2025</span>
-<p>Built high-performance real estate visualization applications.</p>
+<h4>Sr Mobile Application Developer – Trezi</h4>
+<span>May 2023 – Feb 2025 | Noida</span>
 </div>
+
 <div class="job">
-<h4>Senior Mobile Developer – Chetu</h4>
-<span>May 2021 – Mar 2023</span>
-<p>Developed enterprise POS systems and Bluetooth-integrated applications.</p>
+<h4>Senior Mobile Application Developer – Chetu</h4>
+<span>May 2021 – Mar 2023 | Noida</span>
 </div>
+
+<div class="job">
+<h4>Android Developer – Genmish / LeadingDots / BringOn</h4>
+<span>2018 – 2021</span>
+</div>
+
 </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects">
-<h3>Featured Projects</h3>
+<h2>Live Production Apps</h2>
 <div class="projects">
-<div class="card">
-<h4>Rapchik</h4>
-<p>Social engagement Flutter app with Firebase backend.</p>
-<a href="https://play.google.com/store/apps/details?id=com.app.rapchik" target="_blank">View on Play Store →</a>
-</div>
-<div class="card">
-<h4>Allied Jose Delivery</h4>
-<p>Real-time logistics & delivery tracking application.</p>
-<a href="https://play.google.com/store/apps/details?id=com.allied.josedelivery" target="_blank">View on Play Store →</a>
-</div>
-<div class="card">
-<h4>Trezi Lens Lite</h4>
-<p>Real estate visualization mobile app optimized for performance.</p>
-<a href="https://play.google.com/store/apps/details?id=com.trezi.lens_lite" target="_blank">View on Play Store →</a>
-</div>
+
+<div class="card"><h4>Rapchik</h4>
+<a href="https://play.google.com/store/apps/details?id=com.app.rapchik" target="_blank">View →</a></div>
+
+<div class="card"><h4>Allied Jose Delivery</h4>
+<a href="https://play.google.com/store/apps/details?id=com.allied.josedelivery" target="_blank">View →</a></div>
+
+<div class="card"><h4>Allied Tech Mingle</h4>
+<a href="https://play.google.com/store/apps/details?id=com.allied.tech.mingle" target="_blank">View →</a></div>
+
+<div class="card"><h4>Trezi Lens Lite</h4>
+<a href="https://play.google.com/store/apps/details?id=com.trezi.lens_lite" target="_blank">View →</a></div>
+
+<div class="card"><h4>Showcase by Trezi</h4>
+<a href="https://play.google.com/store/apps/details?id=com.showcasebytrezi" target="_blank">View →</a></div>
+
+<div class="card"><h4>Pankotech</h4>
+<a href="https://play.google.com/store/apps/details?id=com.pankotech" target="_blank">View →</a></div>
+
+<div class="card"><h4>Punch POS</h4>
+<a href="https://play.google.com/store/apps/details?id=www.punch" target="_blank">View →</a></div>
+
+<div class="card"><h4>Rentrwapp</h4>
+<a href="https://play.google.com/store/apps/details?id=com.rentrwapp" target="_blank">View →</a></div>
+
+<div class="card"><h4>Reekar</h4>
+<a href="https://reekar.com/" target="_blank">View →</a></div>
+
 </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
-<h3>Contact</h3>
+<h2>Contact</h2>
 <div class="contact">
-<p>Email: mohdsuhail004@gmail.com</p>
-<p>Phone: +91-9045466652</p>
-<p><a href="https://github.com/developersuhail" target="_blank">GitHub</a> | 
-<a href="https://www.linkedin.com/in/mohammad-suhail-337b07159/" target="_blank">LinkedIn</a></p>
+📍 Noida, Uttar Pradesh, India <br>
+📧 mohdsuhail004@gmail.com <br>
+📱 +91-9045466652 <br>
+<a href="https://github.com/developersuhail" target="_blank">GitHub</a> |
+<a href="https://www.linkedin.com/in/mohammad-suhail-337b07159/" target="_blank">LinkedIn</a>
 </div>
 </section>
 
@@ -286,25 +213,17 @@ Specialized in Clean Architecture, POS systems, Bluetooth integrations, payment 
 </footer>
 
 <script>
-const text = ["Senior Android Developer","Senior Flutter Developer","Mobile Architect","POS & Bluetooth Specialist"];
-let count=0;
-let index=0;
-let currentText="";
-let letter="";
+const roles=["Senior Android Developer","Senior Flutter Developer","Mobile Architect","POS & Bluetooth Specialist"];
+let i=0,j=0,current="",letter="";
 (function type(){
-if(count===text.length){count=0;}
-currentText=text[count];
-letter=currentText.slice(0,++index);
+if(i===roles.length){i=0;}
+current=roles[i];
+letter=current.slice(0,++j);
 document.getElementById("typing").textContent=letter;
-if(letter.length===currentText.length){
-count++;
-index=0;
-setTimeout(type,1500);
-}else{
-setTimeout(type,100);
-}
+if(letter.length===current.length){
+i++;j=0;setTimeout(type,1500);
+}else{setTimeout(type,80);}
 })();
-ScrollReveal().reveal('.skill, .job, .card',{delay:200, distance:'50px', origin:'bottom', interval:100});
 </script>
 
 </body>
