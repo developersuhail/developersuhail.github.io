@@ -1,1 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohd Suhail | Senior Mobile Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: white;
+}
+
+/* ===== HERO SECTION ===== */
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #1e293b, #2563eb);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.hero h2 {
+    margin-top: 15px;
+    font-weight: 400;
+    color: #cbd5e1;
+}
+
+.hero p {
+    margin-top: 20px;
+    max-width: 700px;
+    color: #94a3b8;
+}
+
+.btn {
+    margin-top: 30px;
+    padding: 12px 25px;
+    background: #2563eb;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+}
+
+/* ===== SECTION ===== */
+
+section {
+    padding: 80px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+h3 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #38bdf8;
+}
+
+/* ===== SKILLS ===== */
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill {
+    background: rgba(255,255,255,0.05);
+    padding: 12px 20px;
+    margin: 10px;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.skill:hover {
+    background: #2563eb;
+}
+
+/* ===== PROJECTS ===== */
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(15px);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    background: rgba(37,99,235,0.2);
+}
+
+.card h4 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ===== CONTACT ===== */
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    margin: 10px 0;
+    color: #cbd5e1;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1e293b;
+    color: #94a3b8;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width: 768px){
+    .hero h1 {
+        font-size: 32px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Mohd Suhail</h1>
+    <h2>Senior Mobile Application Developer</h2>
+    <p>
+        6+ years of experience building scalable Android & Flutter applications.
+        Specialized in Clean Architecture, POS systems, Bluetooth integrations,
+        real-time applications and performance optimization.
+    </p>
+    <a href="#contact" class="btn">Contact Me</a>
+</div>
+
+<!-- SKILLS -->
+<section>
+    <h3>Technical Skills</h3>
+    <div class="skills">
+        <div class="skill">Android (Kotlin)</div>
+        <div class="skill">Flutter (Dart)</div>
+        <div class="skill">Clean Architecture</div>
+        <div class="skill">MVVM</div>
+        <div class="skill">Bloc / Riverpod</div>
+        <div class="skill">Firebase</div>
+        <div class="skill">REST APIs</div>
+        <div class="skill">Bluetooth Integration</div>
+        <div class="skill">Payment Gateway</div>
+        <div class="skill">Jetpack Components</div>
+        <div class="skill">CI/CD</div>
+        <div class="skill">Performance Optimization</div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section>
+    <h3>Featured Projects</h3>
+    <div class="projects">
+
+        <div class="card">
+            <h4>Rapchik</h4>
+            <p>Flutter-based social engagement platform with Firebase backend and scalable architecture.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.app.rapchik" target="_blank">View on Play Store →</a>
+        </div>
+
+        <div class="card">
+            <h4>Allied Jose Delivery</h4>
+            <p>Delivery management application with real-time tracking and Google Maps integration.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.allied.josedelivery" target="_blank">View on Play Store →</a>
+        </div>
+
+        <div class="card">
+            <h4>Trezi Lens Lite</h4>
+            <p>Real estate visualization mobile app with optimized rendering and performance tuning.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.trezi.lens_lite" target="_blank">View on Play Store →</a>
+        </div>
+
+        <div class="card">
+            <h4>Punch (POS System)</h4>
+            <p>Android POS system with Bluetooth device integration and secure payment processing.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h3>Contact</h3>
+    <div class="contact">
+        <p>Email: mohdsuhail004@gmail.com</p>
+        <p>Phone: +91-9045466652</p>
+        <p><a href="https://www.linkedin.com/in/mohammad-suhail-337b07159/" target="_blank">LinkedIn Profile</a></p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Mohd Suhail | Senior Mobile Developer
+</footer>
+
+</body>
+</html>
 
