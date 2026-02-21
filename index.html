@@ -282,20 +282,22 @@ grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:40px;
 }
 
-.card{
-background:linear-gradient(145deg,#111122,#1a1a2e);
-border-radius:24px;
-padding:30px;
-text-align:center;
-box-shadow:0 15px 50px rgba(0,0,0,0.6);
-transition:all 0.4s ease;
-border:1px solid rgba(157,78,221,0.2);
+/* 3D Tilt Card */
+
+.tilt-card{
+transform-style:preserve-3d;
+transition:transform 0.2s ease;
+will-change:transform;
 }
 
-.card:hover{
-transform:translateY(-12px);
-box-shadow:0 25px 70px rgba(157,78,221,0.7);
-border:1px solid #9d4edd;
+.tilt-card:hover{
+transition:transform 0.1s ease;
+}
+
+.tilt-card .app-icon,
+.tilt-card h4,
+.tilt-card .store-btn{
+transform:translateZ(30px);
 }
 
 .app-icon{
@@ -608,35 +610,105 @@ real-time mobile systems. Delivered 15+ production applications live on Play Sto
 <h2>Live Production Apps</h2>
 <div class="projects">
 
-<div class="card"><h4>Rapchik</h4>
-<a href="https://play.google.com/store/apps/details?id=com.app.rapchik" target="_blank">View →</a></div>
+<div class="card tilt-card">
+  <div class="app-icon">
+    <img src="https://play-lh.googleusercontent.com/7xK7kVvNYS8lm2Sleqrs9jwELyhl725LLJoPLD114F8CbnMD4PlzyBbs6k8ZZr68SUY=w240-h480" alt="Rapchik">
+  </div>
+  <h4>Rapchik</h4>
+  <a href="https://play.google.com/store/apps/details?id=com.app.rapchik" target="_blank" class="store-btn">
+    <i class="fab fa-google-play"></i> View on Play Store
+  </a>
+</div>
 
-<div class="card"><h4>Jose Delivery</h4>
-<a href="https://play.google.com/store/apps/details?id=com.allied.josedelivery" target="_blank">View →</a></div>
+<div class="card tilt-card">
+  <div class="app-icon">
+    <img src="https://play-lh.googleusercontent.com/x9VHtV6nRvWmvMRGsiE232zraFMvx6bMpiKFFnzvolGZrxhgbf28pQ5e0siJmq9VcT0=w240-h480" alt="Jose Delivery">
+  </div>
+  <h4>Jose Delivery</h4>
+  <a href="https://play.google.com/store/apps/details?id=com.allied.josedelivery" target="_blank" class="store-btn">
+    <i class="fab fa-google-play"></i> View on Play Store
+  </a>
+</div>
 
-  <div class="card"><h4>PartyLifeSociety</h4>
-<a href="https://play.google.com/store/apps/details?id=com.partylifesociety" target="_blank">View →</a></div>
+<div class="card tilt-card">
+  <div class="app-icon">
+    <img src="https://play-lh.googleusercontent.com/VX9kqYh6gMPkTFogyXv3gZH_JqhGlywbn4T_6QAEyy6AdZkGouVp21HbQJseb3Cidg=w240-h480" alt="PartyLifeSociety">
+  </div>
+  <h4>PartyLifeSociety</h4>
+  <a href="https://play.google.com/store/apps/details?id=com.partylifesociety" target="_blank" class="store-btn">
+    <i class="fab fa-google-play"></i> View on Play Store
+  </a>
+</div>
 
-<div class="card"><h4>Trezi Lens Lite</h4>
-<a href="https://play.google.com/store/apps/details?id=com.trezi.lensLite" target="_blank">View →</a></div>
+<div class="card tilt-card">
+  <div class="app-icon">
+    <img src="https://play-lh.googleusercontent.com/kH0b07XHtcwPa5RWPLXnwI75PwQxzb62LF8A3BnQUwpsOSJyYwcmBHQYaWV7k_gakdI=w240-h480" alt="Trezi Lens Lite">
+  </div>
+  <h4>Trezi Lens Lite</h4>
+  <a href="https://play.google.com/store/apps/details?id=com.trezi.lensLite" target="_blank" class="store-btn">
+    <i class="fab fa-google-play"></i> View on Play Store
+  </a>
+</div>
 
-<div class="card"><h4>Showcase by Trezi</h4>
-<a href="https://play.google.com/store/apps/details?id=com.showcasebytreziandroid" target="_blank">View →</a></div>
+<div class="card tilt-card">
+  <div class="app-icon">
+    <img src="https://play-lh.googleusercontent.com/6qjUpBAkLTlaX2UjsFvdcGaVbL50DJBSSTXobHxPPHnNGNcwHlkRQAt2bQVWwtIg9Yg=w240-h480" alt="Showcase by Trezi">
+  </div>
+  <h4>Showcase by Trezi</h4>
+  <a href="https://play.google.com/store/apps/details?id=com.showcasebytreziandroid" target="_blank" class="store-btn">
+    <i class="fab fa-google-play"></i> View on Play Store
+  </a>
+</div>
 
-<div class="card"><h4>Banktech POS</h4>
-<a href="https://play.google.com/store/apps/details?id=com.banktech" target="_blank">View →</a></div>
-  
-<div class="card"><h4>Dating App - Mingle</h4>
-<a href="https://play.google.com/store/apps/details?id=com.allied.tech.mingle" target="_blank">View →</a></div>
+<div class="card tilt-card">
+  <div class="app-icon">
+    <img src="https://play-lh.googleusercontent.com/placeholder=w240-h480" alt="Banktech POS">
+  </div>
+  <h4>Banktech POS</h4>
+  <a href="https://play.google.com/store/apps/details?id=com.banktech" target="_blank" class="store-btn">
+    <i class="fab fa-google-play"></i> View on Play Store
+  </a>
+</div>
 
-<div class="card"><h4>Punch</h4>
-<a href="https://play.google.com/store/apps/details?id=www.punch" target="_blank">View →</a></div>
+<div class="card tilt-card">
+  <div class="app-icon">
+    <img src="https://play-lh.googleusercontent.com/placeholder=w240-h480" alt="Mingle">
+  </div>
+  <h4>Dating App - Mingle</h4>
+  <a href="https://play.google.com/store/apps/details?id=com.allied.tech.mingle" target="_blank" class="store-btn">
+    <i class="fab fa-google-play"></i> View on Play Store
+  </a>
+</div>
 
-<div class="card"><h4>Rentwapp</h4>
-<a href="https://play.google.com/store/apps/details?id=com.rentwapp" target="_blank">View →</a></div>
+<div class="card tilt-card">
+  <div class="app-icon">
+    <img src="https://play-lh.googleusercontent.com/placeholder=w240-h480" alt="Punch">
+  </div>
+  <h4>Punch</h4>
+  <a href="https://play.google.com/store/apps/details?id=www.punch" target="_blank" class="store-btn">
+    <i class="fab fa-google-play"></i> View on Play Store
+  </a>
+</div>
 
-<div class="card"><h4>Reekar</h4>
-<a href="https://reekar.com/" target="_blank">View →</a></div>
+<div class="card tilt-card">
+  <div class="app-icon">
+    <img src="https://play-lh.googleusercontent.com/placeholder=w240-h480" alt="Rentwapp">
+  </div>
+  <h4>Rentwapp</h4>
+  <a href="https://play.google.com/store/apps/details?id=com.rentwapp" target="_blank" class="store-btn">
+    <i class="fab fa-google-play"></i> View on Play Store
+  </a>
+</div>
+
+<div class="card tilt-card">
+  <div class="app-icon">
+    <img src="https://play-lh.googleusercontent.com/placeholder=w240-h480" alt="Reekar">
+  </div>
+  <h4>Reekar</h4>
+  <a href="https://reekar.com/" target="_blank" class="store-btn">
+    <i class="fas fa-globe"></i> Visit Website
+  </a>
+</div>
 
 </div>
 </section>
@@ -780,6 +852,33 @@ requestAnimationFrame(animate);
 }
 
 animate();
+
+
+  /* 3D Tilt Effect */
+
+document.querySelectorAll(".tilt-card").forEach(card => {
+
+card.addEventListener("mousemove", (e) => {
+
+const rect = card.getBoundingClientRect();
+const x = e.clientX - rect.left;
+const y = e.clientY - rect.top;
+
+const centerX = rect.width / 2;
+const centerY = rect.height / 2;
+
+const rotateX = -(y - centerY) / 15;
+const rotateY = (x - centerX) / 15;
+
+card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+
+});
+
+card.addEventListener("mouseleave", () => {
+card.style.transform = "rotateX(0deg) rotateY(0deg)";
+});
+
+});
   
 </script>
 
