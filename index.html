@@ -324,20 +324,29 @@ color:#c77dff;
 .store-btn{
 display:inline-flex;
 align-items:center;
-gap:8px;
-padding:10px 18px;
-border-radius:40px;
-background:linear-gradient(45deg,#9d4edd,#c77dff);
-color:white;
-text-decoration:none;
-font-weight:600;
+gap:10px;
+padding:12px 22px;
+border-radius:50px;
+background:#9d4edd;          /* solid purple */
+color:#ffffff;
+font-weight:700;
 font-size:14px;
-transition:0.3s;
+text-decoration:none;
+border:2px solid #c77dff;
+box-shadow:0 6px 20px rgba(157,78,221,0.6);
+transition:all 0.3s ease;
+letter-spacing:0.5px;
+}
+
+.store-btn i{
+font-size:16px;
 }
 
 .store-btn:hover{
-transform:scale(1.05);
-box-shadow:0 10px 30px rgba(157,78,221,0.6);
+background:#c77dff;
+color:#000;
+transform:translateY(-4px) scale(1.05);
+box-shadow:0 10px 30px rgba(199,125,255,0.8);
 }
   
 /* .projects{
