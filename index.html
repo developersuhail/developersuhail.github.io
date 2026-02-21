@@ -6,8 +6,6 @@
 <title>Mohd Suhail | Senior Mobile Application Developer</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-
-  
 <style>
 *{
 margin:0;
@@ -18,8 +16,42 @@ scroll-behavior:smooth;
 }
 
 body{
-background:linear-gradient(135deg,#ff7a18 0%,#ff9a2f 40%,#ffb347 100%);
-color:#222;
+background:linear-gradient(-45deg,#0f0f1a,#1a0f2e,#2a0f4d,#120018);
+background-size:400% 400%;
+animation:gradientMove 14s ease infinite;
+color:#eaeaea;
+overflow-x:hidden;
+}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* Scroll Progress */
+.progress-bar{
+position:fixed;
+top:0;
+left:0;
+height:4px;
+background:linear-gradient(90deg,#9d4edd,#c77dff);
+width:0%;
+z-index:2000;
+}
+
+/* Floating purple glow */
+body::after{
+content:"";
+position:fixed;
+top:-150px;
+right:-150px;
+width:400px;
+height:400px;
+background:rgba(157,78,221,0.4);
+border-radius:50%;
+filter:blur(160px);
+z-index:-1;
 }
 
 /* NAVBAR */
@@ -27,40 +59,46 @@ nav{
 position:fixed;
 top:0;
 width:100%;
-background:rgba(255,255,255,0.2);
-backdrop-filter:blur(20px);
-padding:16px 0;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(25px);
+padding:18px 0;
 text-align:center;
 z-index:1000;
-box-shadow:0 8px 30px rgba(0,0,0,0.1);
+box-shadow:0 10px 40px rgba(0,0,0,0.5);
 }
 
 nav a{
-color:white;
+color:#c77dff;
 margin:0 22px;
 text-decoration:none;
 font-weight:600;
-letter-spacing:0.5px;
-transition:0.3s ease;
+transition:0.3s;
 }
 
 nav a:hover{
-color:#222;
+color:white;
 }
 
-/* SECTION BASE */
+/* SECTION */
 section{
 padding:110px 20px;
 max-width:1100px;
 margin:auto;
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
+}
+
+section.visible{
+opacity:1;
+transform:translateY(0);
 }
 
 h2{
 text-align:center;
 margin-bottom:60px;
 font-size:34px;
-color:white;
-letter-spacing:1px;
+color:#c77dff;
 }
 
 /* HERO */
@@ -70,6 +108,20 @@ display:flex;
 align-items:center;
 justify-content:center;
 padding-top:120px;
+position:relative;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+width:700px;
+height:700px;
+background:radial-gradient(circle,rgba(157,78,221,0.4) 0%,transparent 70%);
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+filter:blur(150px);
+z-index:-1;
 }
 
 .hero-container{
@@ -86,36 +138,49 @@ width:260px;
 height:260px;
 border-radius:50%;
 object-fit:cover;
-border:6px solid white;
-box-shadow:0 25px 60px rgba(0,0,0,0.25);
+border:4px solid #9d4edd;
+box-shadow:0 25px 70px rgba(157,78,221,0.6);
 transition:0.4s ease;
 }
 
 .profile-img:hover{
-transform:scale(1.05);
+transform:scale(1.08) rotate(2deg);
 }
 
 .hero-text{
 max-width:600px;
-color:white;
 }
 
 .hero-text h1{
-font-size:46px;
+font-size:48px;
 font-weight:700;
+color:white;
 }
 
 .hero-text h3{
 margin-top:12px;
 height:30px;
-font-weight:500;
-opacity:0.95;
+color:#c77dff;
 }
 
 .hero-text p{
 margin-top:22px;
 line-height:1.8;
 font-size:15.5px;
+color:#ddd;
+}
+
+/* Stats */
+.stats{
+display:flex;
+gap:40px;
+margin-top:35px;
+flex-wrap:wrap;
+}
+
+.stat h3{
+font-size:30px;
+color:#c77dff;
 }
 
 /* BUTTONS */
@@ -127,17 +192,15 @@ text-decoration:none;
 font-weight:600;
 display:inline-block;
 margin-right:18px;
-background:white;
-color:#ff7a18;
-box-shadow:0 12px 30px rgba(0,0,0,0.2);
+background:linear-gradient(45deg,#9d4edd,#c77dff);
+color:white;
+box-shadow:0 12px 30px rgba(157,78,221,0.5);
 transition:all 0.3s ease;
 }
 
 .btn:hover{
-transform:translateY(-6px);
-box-shadow:0 18px 45px rgba(0,0,0,0.3);
-background:#222;
-color:white;
+transform:translateY(-6px) scale(1.05);
+box-shadow:0 18px 45px rgba(157,78,221,0.7);
 }
 
 /* SKILLS */
@@ -151,16 +214,16 @@ gap:14px;
 .skill{
 padding:10px 20px;
 border-radius:40px;
-background:white;
-color:#ff7a18;
+background:#1a1a2e;
+color:#c77dff;
 font-weight:500;
 font-size:14px;
 transition:all 0.3s ease;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+border:1px solid #9d4edd;
 }
 
 .skill:hover{
-background:#222;
+background:#9d4edd;
 color:white;
 transform:translateY(-4px);
 }
@@ -173,95 +236,58 @@ gap:30px;
 }
 
 .card{
-background:white;
+background:#111122;
 border-radius:22px;
 padding:28px;
-box-shadow:0 15px 40px rgba(0,0,0,0.15);
+box-shadow:0 15px 40px rgba(0,0,0,0.6);
 transition:all 0.35s ease;
+border:1px solid #2a0f4d;
 }
 
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 20px 55px rgba(0,0,0,0.25);
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 20px 60px rgba(157,78,221,0.6);
 }
 
 .card h4{
-color:#ff7a18;
-margin-bottom:6px;
+color:#c77dff;
 }
 
 .card a{
 display:inline-block;
 margin-top:14px;
-color:#ff7a18;
+color:#c77dff;
 font-weight:600;
 text-decoration:none;
-transition:0.3s;
 }
 
-.card a:hover{
-text-decoration:underline;
-}
-
-/* EXPERIENCE */
 .timeline{
-border-left:4px solid white;
+border-left:4px solid #9d4edd;
 padding-left:25px;
-color:white;
 }
 
-.job{
-margin-bottom:35px;
-}
-
-.job h4{
-margin-bottom:6px;
-}
-
-.job span{
-font-size:14px;
-opacity:0.95;
-}
-
-/* CONTACT */
 .contact{
 text-align:center;
-color:white;
 line-height:2.2;
-font-size:15px;
 }
 
-.contact a{
-color:white;
-font-weight:600;
-text-decoration:none;
-}
-
-.contact a:hover{
-text-decoration:underline;
-}
-
-/* FOOTER */
 footer{
 text-align:center;
 padding:30px;
-background:rgba(0,0,0,0.15);
-color:white;
+background:#0a0a14;
+color:#999;
 margin-top:70px;
-font-size:14px;
 }
 
 @media(max-width:768px){
 .hero-text h1{font-size:32px;}
 .profile-img{width:200px;height:200px;}
 }
-
-  
 </style>
-
-  
 </head>
 <body>
+
+<div class="progress-bar" id="progressBar"></div>
 
 <nav>
 <a href="#skills">Skills</a>
@@ -270,10 +296,9 @@ font-size:14px;
 <a href="#contact">Contact</a>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
 <div class="hero-container">
-<img src="profile.jpg" class="profile-img" alt="Mohd Suhail">
+<img src="profile.jpg" class="profile-img">
 <div class="hero-text">
 <h1>Mohd Suhail</h1>
 <h3 id="typing"></h3>
@@ -284,13 +309,19 @@ Jetpack Compose, POS systems, Bluetooth/BLE integrations, Payment Gateways and
 real-time mobile systems. Delivered 15+ production applications live on Play Store.
 </p>
 
+<div class="stats">
+<div class="stat"><h3><span class="counter" data-target="7">0</span>+</h3><p>Years Experience</p></div>
+<div class="stat"><h3><span class="counter" data-target="15">0</span>+</h3><p>Production Apps</p></div>
+<div class="stat"><h3><span class="counter" data-target="20">0</span>K+</h3><p>Users Served</p></div>
+</div>
+
 <a href="Suhail.pdf" class="btn" target="_blank">Download Resume</a>
 <a href="#contact" class="btn">Hire Me</a>
 </div>
 </div>
 </div>
 
-<!-- SKILLS -->
+  <!-- SKILLS -->
 <section id="skills">
 <h2>Technical Skills</h2>
 <div class="skills">
@@ -331,7 +362,6 @@ real-time mobile systems. Delivered 15+ production applications live on Play Sto
 <div class="skill">Agile / Scrum</div>
 </div>
 </section>
-
 <!-- EXPERIENCE -->
 <section id="experience">
 <h2>Professional Experience</h2>
@@ -407,11 +437,12 @@ real-time mobile systems. Delivered 15+ production applications live on Play Sto
 </div>
 </section>
 
-<footer>
-© 2026 Mohd Suhail | Senior Mobile Application Developer
-</footer>
 
+  
+  
 <script>
+
+/* Typing */
 const roles=["Senior Android Developer","Senior Flutter Developer","Mobile Architect","POS & Bluetooth Specialist"];
 let i=0,j=0,current="",letter="";
 (function type(){
@@ -423,6 +454,43 @@ if(letter.length===current.length){
 i++;j=0;setTimeout(type,1500);
 }else{setTimeout(type,80);}
 })();
+
+/* Counter */
+const counters=document.querySelectorAll('.counter');
+counters.forEach(counter=>{
+counter.innerText='0';
+const updateCounter=()=>{
+const target=+counter.getAttribute('data-target');
+const c=+counter.innerText;
+const increment=target/100;
+if(c<target){
+counter.innerText=`${Math.ceil(c+increment)}`;
+setTimeout(updateCounter,20);
+}else{
+counter.innerText=target;
+}
+};
+updateCounter();
+});
+
+/* Scroll reveal */
+const sections=document.querySelectorAll("section");
+window.addEventListener("scroll",()=>{
+sections.forEach(section=>{
+if(section.getBoundingClientRect().top<window.innerHeight-100){
+section.classList.add("visible");
+}
+});
+});
+
+/* Progress Bar */
+window.onscroll=function(){
+let winScroll=document.body.scrollTop||document.documentElement.scrollTop;
+let height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+let scrolled=(winScroll/height)*100;
+document.getElementById("progressBar").style.width=scrolled+"%";
+};
+
 </script>
 
 </body>
