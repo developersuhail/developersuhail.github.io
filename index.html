@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mohd Suhail | Senior Mobile Developer</title>
+<title>Mohd Suhail | Senior Mobile Application Developer</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
 
 * {
@@ -20,11 +21,24 @@ body {
     color: white;
 }
 
-/* ===== HERO SECTION ===== */
+section {
+    padding: 80px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: #38bdf8;
+}
+
+/* HERO */
 
 .hero {
     height: 100vh;
-    background: linear-gradient(135deg, #0f172a, #1e293b, #2563eb);
+    background: linear-gradient(135deg,#0f172a,#1e293b,#2563eb);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,26 +52,25 @@ body {
     font-weight: 700;
 }
 
-.hero h2 {
-    margin-top: 15px;
+.hero h3 {
+    margin-top: 10px;
     font-weight: 400;
     color: #cbd5e1;
 }
 
 .hero p {
     margin-top: 20px;
-    max-width: 700px;
+    max-width: 750px;
     color: #94a3b8;
 }
 
 .btn {
-    margin-top: 30px;
+    margin-top: 25px;
     padding: 12px 25px;
     background: #2563eb;
-    border: none;
     border-radius: 30px;
-    color: white;
     text-decoration: none;
+    color: white;
     font-weight: 600;
     transition: 0.3s;
 }
@@ -66,22 +79,7 @@ body {
     background: #1d4ed8;
 }
 
-/* ===== SECTION ===== */
-
-section {
-    padding: 80px 20px;
-    max-width: 1100px;
-    margin: auto;
-}
-
-h3 {
-    font-size: 32px;
-    margin-bottom: 40px;
-    text-align: center;
-    color: #38bdf8;
-}
-
-/* ===== SKILLS ===== */
+/* SKILLS */
 
 .skills {
     display: flex;
@@ -91,8 +89,8 @@ h3 {
 
 .skill {
     background: rgba(255,255,255,0.05);
-    padding: 12px 20px;
-    margin: 10px;
+    padding: 10px 18px;
+    margin: 8px;
     border-radius: 25px;
     backdrop-filter: blur(10px);
     transition: 0.3s;
@@ -102,7 +100,27 @@ h3 {
     background: #2563eb;
 }
 
-/* ===== PROJECTS ===== */
+/* EXPERIENCE */
+
+.timeline {
+    border-left: 3px solid #2563eb;
+    padding-left: 20px;
+}
+
+.job {
+    margin-bottom: 40px;
+}
+
+.job h4 {
+    margin-bottom: 5px;
+}
+
+.job span {
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+/* PROJECTS */
 
 .projects {
     display: grid;
@@ -123,35 +141,26 @@ h3 {
     background: rgba(37,99,235,0.2);
 }
 
-.card h4 {
-    margin-bottom: 10px;
-}
-
-.card p {
-    color: #94a3b8;
-    font-size: 14px;
-}
-
 .card a {
     display: inline-block;
-    margin-top: 15px;
+    margin-top: 12px;
     color: #38bdf8;
     text-decoration: none;
     font-weight: 600;
 }
 
-/* ===== CONTACT ===== */
+/* CONTACT */
 
 .contact {
     text-align: center;
 }
 
-.contact p {
-    margin: 10px 0;
-    color: #cbd5e1;
+.contact a {
+    color: #38bdf8;
+    text-decoration: none;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 
 footer {
     text-align: center;
@@ -160,12 +169,8 @@ footer {
     color: #94a3b8;
 }
 
-/* ===== RESPONSIVE ===== */
-
-@media(max-width: 768px){
-    .hero h1 {
-        font-size: 32px;
-    }
+@media(max-width:768px){
+    .hero h1 { font-size: 32px; }
 }
 
 </style>
@@ -175,60 +180,97 @@ footer {
 <!-- HERO -->
 <div class="hero">
     <h1>Mohd Suhail</h1>
-    <h2>Senior Mobile Application Developer</h2>
+    <h3>Senior Mobile Application Developer (Android & Flutter)</h3>
     <p>
-        6+ years of experience building scalable Android & Flutter applications.
-        Specialized in Clean Architecture, POS systems, Bluetooth integrations,
-        real-time applications and performance optimization.
+        Senior Mobile Developer with 6+ years of experience building scalable Android and Flutter applications.
+        Expertise in Clean Architecture, POS systems, Bluetooth integrations, payment gateways, 
+        real-time applications, and high-performance UI systems. 
+        Delivered 15+ production mobile apps live on Google Play Store.
     </p>
     <a href="#contact" class="btn">Contact Me</a>
 </div>
 
 <!-- SKILLS -->
 <section>
-    <h3>Technical Skills</h3>
+    <h2>Technical Skills</h2>
     <div class="skills">
-        <div class="skill">Android (Kotlin)</div>
+        <div class="skill">Android (Kotlin, Java)</div>
         <div class="skill">Flutter (Dart)</div>
         <div class="skill">Clean Architecture</div>
-        <div class="skill">MVVM</div>
-        <div class="skill">Bloc / Riverpod</div>
-        <div class="skill">Firebase</div>
+        <div class="skill">MVVM / MVC / MVP</div>
+        <div class="skill">Bloc / Riverpod / GetX</div>
+        <div class="skill">Firebase (Auth, FCM, Firestore)</div>
         <div class="skill">REST APIs</div>
-        <div class="skill">Bluetooth Integration</div>
-        <div class="skill">Payment Gateway</div>
+        <div class="skill">WebSockets</div>
+        <div class="skill">GraphQL</div>
+        <div class="skill">Bluetooth / POS Systems</div>
+        <div class="skill">Payment Gateway Integration</div>
+        <div class="skill">In-App Purchases</div>
         <div class="skill">Jetpack Components</div>
+        <div class="skill">Coroutines</div>
         <div class="skill">CI/CD</div>
         <div class="skill">Performance Optimization</div>
     </div>
 </section>
 
+<!-- EXPERIENCE -->
+<section>
+    <h2>Professional Experience</h2>
+    <div class="timeline">
+
+        <div class="job">
+            <h4>Senior Software Engineer – Nexintain Technologies</h4>
+            <span>Apr 2025 – Present</span>
+            <p>Leading Flutter & Android development, architecting scalable mobile solutions and mentoring developers.</p>
+        </div>
+
+        <div class="job">
+            <h4>Senior Mobile Application Developer – Trezi</h4>
+            <span>May 2023 – Feb 2025</span>
+            <p>Developed and optimized real estate visualization applications with high-performance rendering.</p>
+        </div>
+
+        <div class="job">
+            <h4>Senior Mobile Application Developer – Chetu</h4>
+            <span>May 2021 – Mar 2023</span>
+            <p>Built enterprise mobile applications including POS systems, Bluetooth integrations, and payment modules.</p>
+        </div>
+
+        <div class="job">
+            <h4>Android Developer – Multiple Organizations</h4>
+            <span>2018 – 2021</span>
+            <p>Developed native Android applications, integrated APIs, and maintained Play Store deployments.</p>
+        </div>
+
+    </div>
+</section>
+
 <!-- PROJECTS -->
 <section>
-    <h3>Featured Projects</h3>
+    <h2>Featured Projects</h2>
     <div class="projects">
 
         <div class="card">
             <h4>Rapchik</h4>
-            <p>Flutter-based social engagement platform with Firebase backend and scalable architecture.</p>
+            <p>Social engagement mobile application built with Flutter.</p>
             <a href="https://play.google.com/store/apps/details?id=com.app.rapchik" target="_blank">View on Play Store →</a>
         </div>
 
         <div class="card">
             <h4>Allied Jose Delivery</h4>
-            <p>Delivery management application with real-time tracking and Google Maps integration.</p>
+            <p>Delivery & logistics management mobile app with real-time tracking.</p>
             <a href="https://play.google.com/store/apps/details?id=com.allied.josedelivery" target="_blank">View on Play Store →</a>
         </div>
 
         <div class="card">
             <h4>Trezi Lens Lite</h4>
-            <p>Real estate visualization mobile app with optimized rendering and performance tuning.</p>
+            <p>Real estate visualization application with optimized performance.</p>
             <a href="https://play.google.com/store/apps/details?id=com.trezi.lens_lite" target="_blank">View on Play Store →</a>
         </div>
 
         <div class="card">
-            <h4>Punch (POS System)</h4>
-            <p>Android POS system with Bluetooth device integration and secure payment processing.</p>
+            <h4>Punch POS System</h4>
+            <p>Android Native POS app with Bluetooth & payment integration.</p>
         </div>
 
     </div>
@@ -236,18 +278,18 @@ footer {
 
 <!-- CONTACT -->
 <section id="contact">
-    <h3>Contact</h3>
+    <h2>Contact</h2>
     <div class="contact">
         <p>Email: mohdsuhail004@gmail.com</p>
         <p>Phone: +91-9045466652</p>
-        <p><a href="https://www.linkedin.com/in/mohammad-suhail-337b07159/" target="_blank">LinkedIn Profile</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/mohammad-suhail-337b07159/" target="_blank">linkedin.com/in/mohammad-suhail</a></p>
+        <p>GitHub: <a href="https://github.com/developersuhail" target="_blank">github.com/developersuhail</a></p>
     </div>
 </section>
 
 <footer>
-    © 2026 Mohd Suhail | Senior Mobile Developer
+    © 2026 Mohd Suhail | Senior Mobile Application Developer
 </footer>
 
 </body>
 </html>
-
